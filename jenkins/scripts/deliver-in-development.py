@@ -8,8 +8,8 @@ def calling_controlm(folder):
     print("FOLDER RECEIVED INTO THE FUNCTION LAUNCHING: ", folder)
     print(urllib3.__version__)
     urllib3.disable_warnings() # disable warnings when creating unverified requests
-    endpoint='https://<CTLM_ENDPOINT>/automation-api'
-    token='<TOKEN>'
+    endpoint='https://se-sanb0x-aapi.us1.controlm.com/automation-api'
+    token='UFJER0ZQOjBhMDM5YjA1LWQ1MzMtNGU0MS05NTg0LTJmZDU5NDJhOTM1NzpSK2Z2anBmRmIvNjVGOHJvaTQxbGM2dU1zSWNLRVRuTEZFOFJJL3k1ZWtvPQ=='
     ctm='IN01'
     ipAddress = "192.168.38.1"
 
@@ -56,8 +56,8 @@ def checkRunFolder(ejecucionRunID):
     wayToChoose = 0
     print("RUNID TO VERIFY FOLDER EXECUTION: ", ejecucionRunID)
     urllib3.disable_warnings() # disable warnings when creating unverified requests
-    endpoint='https://<CTLM_ENDPOINT>/automation-api'
-    token='<TOKEN>'
+    endpoint='https://se-sanb0x-aapi.us1.controlm.com/automation-api'
+    token='UFJER0ZQOjBhMDM5YjA1LWQ1MzMtNGU0MS05NTg0LTJmZDU5NDJhOTM1NzpSK2Z2anBmRmIvNjVGOHJvaTQxbGM2dU1zSWNLRVRuTEZFOFJJL3k1ZWtvPQ=='
     ctm='IN01'
     url_order = endpoint + '/run/status/' + ejecucionRunID
     #
@@ -131,8 +131,8 @@ def checkOutputJobs(jobid,jobname,jobtype):
 
     ### Taking the output. 
     urllib3.disable_warnings() # disable warnings when creating unverified requests
-    endpoint='https://<CTLM_ENDPOINT>/automation-api'
-    token='<TOKEN>'
+    endpoint='https://se-sanb0x-aapi.us1.controlm.com/automation-api'
+    token='UFJER0ZQOjBhMDM5YjA1LWQ1MzMtNGU0MS05NTg0LTJmZDU5NDJhOTM1NzpSK2Z2anBmRmIvNjVGOHJvaTQxbGM2dU1zSWNLRVRuTEZFOFJJL3k1ZWtvPQ=='
     ctm='IN01'
     url_output = endpoint + '/run/job/' + takeidjob + '/output'
     #
@@ -179,8 +179,8 @@ def runEventElection(wayToChoose):
         event = 'dav-event-NOT-VALUE'
     print(urllib3.__version__)
     urllib3.disable_warnings() # disable warnings when creating unverified requests
-    endpoint='https://<CTLM_ENDPOINT>/automation-api'
-    token='<TOKEN>'
+    endpoint='https://se-sanb0x-aapi.us1.controlm.com/automation-api'
+    token='UFJER0ZQOjBhMDM5YjA1LWQ1MzMtNGU0MS05NTg0LTJmZDU5NDJhOTM1NzpSK2Z2anBmRmIvNjVGOHJvaTQxbGM2dU1zSWNLRVRuTEZFOFJJL3k1ZWtvPQ=='
     ctm='IN01'
     
     
