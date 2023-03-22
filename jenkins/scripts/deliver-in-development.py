@@ -19,8 +19,6 @@ def calling_controlm(folder):
                   "variables": [
                         {
                             "varIP": ipAddress,
-                           # "VarSurname": "David",
-                           # "VarCompany": "BMC Software"
                         }
                     ] 
                 })
@@ -56,7 +54,6 @@ def calling_controlm(folder):
 ### Function to Check Folder Execution
 def checkRunFolder(ejecucionRunID):
     wayToChoose = 0
-    #print("RunID to Verify Execution :", ejecucionRunID)
     print("RUNID TO VERIFY FOLDER EXECUTION: ", ejecucionRunID)
     urllib3.disable_warnings() # disable warnings when creating unverified requests
     endpoint='https://<CTLM_ENDPOINT>/automation-api'
@@ -65,7 +62,6 @@ def checkRunFolder(ejecucionRunID):
     url_order = endpoint + '/run/status/' + ejecucionRunID
     #
     http_order = urllib3.PoolManager(cert_reqs='CERT_NONE')  
-    #response_order = http_order.request("POST", url, headers=headers, body=order_encoded_body)
     response_getorder = http_order.request('GET', url_order, headers={
         'x-api-key': token,
         'Content-Type': 'application/json',
@@ -79,7 +75,6 @@ def checkRunFolder(ejecucionRunID):
     while (folderExecution == "Executing"):
         time.sleep(10)
         http_order = urllib3.PoolManager(cert_reqs='CERT_NONE')  
-        #response_order = http_order.request("POST", url, headers=headers, body=order_encoded_body)
         response_loop_getorder = http_order.request('GET', url_order, headers={
             'x-api-key': token,
             'Content-Type': 'application/json',
@@ -132,9 +127,7 @@ def checkOutputJobs(jobid,jobname,jobtype):
                     #takenamejob = mynamejob
                     takeidjob = myidjob
                     break
-    
-    #print("Mi job name es: ",takenamejob)
-    #print("El id de mi job es: ",takeidjob)
+
 
     ### Taking the output. 
     urllib3.disable_warnings() # disable warnings when creating unverified requests
@@ -151,12 +144,8 @@ def checkOutputJobs(jobid,jobname,jobtype):
         'Accept': 'application/json'
         }
     )
-    #output = response_getoutput.data 
     output = response_getoutput.data
     output_text = output.decode('utf-8')
-    #output2 = response_getoutput.text 
-    #my_bytes = respuesta.enconde('utf-8')
-    #json_respuesta = json.loads(respuesta)
     print("El contenido del output ha sido: ", output_text)
     if "0% packet loss" in output_text:
         print("No hemos tenido perdida de paquetes")
