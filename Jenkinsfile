@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'echo we could do something'
+                sh 'echo we could do something.'
                 sh 'pip install --upgrade pip'
                 sh 'pip install urllib3'
             }
