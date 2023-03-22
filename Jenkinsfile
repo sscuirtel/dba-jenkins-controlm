@@ -30,8 +30,7 @@ pipeline {
             steps {
                 sh 'python3 ./jenkins/scripts/deliver-in-development.py'
                 //sh 'docker run --user $(id -u):$(id -g) -v $(pwd)./jenkins/scripts/deliver-in-development.py:./jenkins/scripts/deliver-in-development.py my-image /bin/bash -c "./jenkins/scripts/deliver-in-development.py"'               
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
+                input message: 'Build Ended (Click "Proceed" to finish)'
             }
         }
     }
