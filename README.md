@@ -2,14 +2,14 @@
 
 This is an example to see how we can directly interact with Control-M/Helix Control-M in CI/CD processes from tools like `Jenkins`, `GitLab` or `AWS CodePipeline`. \
 
-![CTLM Swagger](https://github.com/sscuirtel/jenkins-controlm/blob/development/images/Use_Case.png "Use Case")
+![CTLM Swagger](https://github.com/sscuirtel/dba-jenkins-controlm/blob/development/images/Use_Case.png "Use Case")
 
 For this scenario we have used Jenkins as a CI/CD tool. \
 For this we have a pipeline with several branches: \
 	- Development. *Master \
 	- Control-M
 
-As a branch source we have used the following GitHub project (https://github.com/sscuirtel/jenkins-controlm). \
+As a branch source we have used the following GitHub project (https://github.com/sscuirtel/dba-jenkins-controlm). \
 Into this repository we will find the main files of interest. 
 ### Jenkinsfile
 	- This is where we define the phases of our CI/CD process. 
@@ -18,11 +18,11 @@ Into this repository we will find the main files of interest.
 
 The use case is as follows: 
 
-![Use Case](https://github.com/sscuirtel/jenkins-controlm/blob/development/images/scenario.png "Scenario")
+![Use Case](https://github.com/sscuirtel/dba-jenkins-controlm/blob/development/images/scenario.png "Scenario")
 
 The other flow that is waiting for these events is a workflow that is scheduled on a daily basis, but will not go into execution until jenkins sends one of the events listed above.
 
-![Event Election](https://github.com/sscuirtel/jenkins-controlm/blob/development/images/Event_election.png "Event Election")
+![Event Election](https://github.com/sscuirtel/dba-jenkins-controlm/blob/development/images/Event_election.png "Event Election")
 
 
 ### To use this tutorial you will need: 
@@ -70,4 +70,4 @@ ordering folder, check the execution of a folder/jobs control the output of an e
 
 In order to get more knowledge about which actions you could perform to interact with Control-M/Helix Control-M via REST API, the Enterprise Manager exposes a swagger where you will be able to see all the actions that you can perform. 
 
-![CTLM Swagger](https://github.com/sscuirtel/jenkins-controlm/blob/development/images/CTLM_API_Swagger.png "CTLM Swagger")
+![CTLM Swagger](https://github.com/sscuirtel/dba-jenkins-controlm/blob/development/images/CTLM_API_Swagger.png "CTLM Swagger")
